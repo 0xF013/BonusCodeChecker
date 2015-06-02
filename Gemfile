@@ -10,6 +10,13 @@ gem 'rails-api'
 
 gem 'sqlite3'
 
+group :test do
+  gem 'rspec-rails', '~> 3.0'
+  gem 'database_cleaner'
+  gem 'shoulda'
+  gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
+end
 
 
 
