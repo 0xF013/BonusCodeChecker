@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20150602135747) do
 
   create_table "codes", force: :cascade do |t|
     t.string   "value"
-    t.boolean  "sold"
+    t.boolean  "sold",       default: false
     t.integer  "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20150602135747) do
 
   create_table "products", force: :cascade do |t|
     t.string   "name"
-    t.string   "service_name"
+    t.string   "service_name", default: "local"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
