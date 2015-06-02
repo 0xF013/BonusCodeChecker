@@ -1,0 +1,3 @@
+class CodeNotSoldError < BusinessError
+
+end

@@ -1,0 +1,3 @@
+class EntityNotFoundError < BusinessError
+
+end
