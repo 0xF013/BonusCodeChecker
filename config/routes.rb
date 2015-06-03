@@ -3,7 +3,9 @@ BonusCodeChecker::Application.routes.draw do
   # first created -> highest priority.
 
 
-  get 'bonus_codes/:validate' => 'bonus_codes#validate'
+  resources :bonus_codes, only: [:validate] do
+    get :validate, on: :collection
+  end
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

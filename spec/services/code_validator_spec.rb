@@ -1,8 +1,8 @@
 require "rails_helper"
 
 class NullValidationStrategy
-  def validate product_id, code_value
-
+  def validate(product_id, code_value)
+    # proudly do nothing
   end
 end
 
