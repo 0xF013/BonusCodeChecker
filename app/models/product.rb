@@ -6,6 +6,8 @@ class Product < ActiveRecord::Base
 
   # if more models depends on the codes being local or remote
   # refactor the product into STI
+  # e.g. LocalProduct with has_many :codes
+  # and RemoteProduct with :service_name
   has_many :codes
 
   def code_validation_strategy
