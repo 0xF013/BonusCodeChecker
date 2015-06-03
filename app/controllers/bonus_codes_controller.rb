@@ -7,11 +7,11 @@ class BonusCodesController < ApplicationController
         params.require(:product_id),
         params.require(:bonus_code)
       )
-      render json: {}, status: 200
+      render nothing: true, status: 200
     rescue EntityNotFoundError
-      render json: {}, status: 404
+      render nothing: true, status: 404
     rescue CodeNotSoldError
-      render json: {}, status: 403
+      render nothing: true, status: 403
     end
   end
 end
