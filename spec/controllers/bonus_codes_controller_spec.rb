@@ -11,6 +11,9 @@ RSpec.describe BonusCodesController do
       let(:code_value) { 'invalid_code' }
 
       it 'responds with 404' do
+        # this could be extracted into a
+        # it_behaves_like block if it grows into
+        # something more than a one-liner
         expect(response).to have_http_status(404)
       end
     end
