@@ -18,6 +18,7 @@ RSpec.describe BonusCodesController do
     context 'when inexistent code' do
       let(:product_id) { FactoryGirl.create(:product).id }
       let(:code_value) { 'invalid_code' }
+
       it 'responds with 404' do
         expect(response).to have_http_status(404)
       end
@@ -26,6 +27,7 @@ RSpec.describe BonusCodesController do
     context 'when the code does not belong to the product' do
       let(:product_id) { FactoryGirl.create(:product).id }
       let(:code_value) { FactoryGirl.create(:code).value }
+
       it 'respons with 404' do
         expect(response).to have_http_status(404)
       end
@@ -54,6 +56,7 @@ RSpec.describe BonusCodesController do
           product: product,
           sold: true
         ).value }
+
         it 'responds with 200' do
           expect(response).to have_http_status(200)
         end

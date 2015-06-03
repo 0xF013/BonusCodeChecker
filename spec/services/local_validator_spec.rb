@@ -20,7 +20,7 @@ RSpec.describe ValidationStrategies::LocalStrategy, :type => :service do
 
     context 'when code is sold' do
       let(:code) { FactoryGirl.create :code, product: product, sold: true }
-      it 'return true' do
+      it 'returns true' do
         expect(strategy.validate product, code.value).to be true
       end
     end
